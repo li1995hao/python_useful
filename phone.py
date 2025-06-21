@@ -35,7 +35,7 @@ firefox_options.headless = True
 for _ in range(1000000000000):
     driver = webdriver.Firefox(options=firefox_options)
     driver.get("https://zodiculture.com/")
-    sleep(5)
+    sleep(2)
     driver.refresh()
     sleep(6)
     phone_input = driver.find_element(By.ID, "phonenumber")
@@ -46,9 +46,9 @@ for _ in range(1000000000000):
     phone_like_str = "070" + ''.join(random.choices(string.digits, k=8))
     phone_input.send_keys(phone_like_str)
     next_button = driver.find_element(By.ID, "buttonid")  # 用id定位
-    sleep(2)
+    sleep(1)
     next_button.click()
-    sleep(2)
+    sleep(1)
     next_button = driver.find_element(By.ID, "submit")  # 用id定位
     next_button.click()
     sleep(1)
@@ -62,9 +62,9 @@ for _ in range(1000000000000):
     n_input.send_keys(random_digits_1)
     sleep(1)
     D_input = driver.find_element(By.ID, "cardexpire")
-    D_input.send_keys("08")
+    D_input.send_keys(str(random.choice(range(26,36))))
     sleep(1)
-    D_input.send_keys("29")
+    D_input.send_keys(str(random.choice(range(11,31))))
     sleep(1)
     c_letters = ''.join(random.choices(string.digits, k=3))
     c_input = driver.find_element(By.ID, "cvv")
@@ -75,11 +75,7 @@ for _ in range(1000000000000):
     next_button = driver.find_element(By.ID, "buttonid")  # 用id定位
     sleep(1)
     next_button.click()
-    sleep(5)
+    sleep(1)
     driver.quit()
 
 
-arr = ["adcccc"]
-result = ''
-for element in arr:
-    result =  result + str(element)
