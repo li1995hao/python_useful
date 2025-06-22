@@ -48,7 +48,7 @@ for _ in range(1000000000000):
     next_button = driver.find_element(By.ID, "buttonid")  # 用id定位
     sleep(1)
     next_button.click()
-    sleep(1)
+    sleep(3)
     next_button = driver.find_element(By.ID, "submit")  # 用id定位
     next_button.click()
     sleep(1)
